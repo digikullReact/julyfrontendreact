@@ -44,7 +44,8 @@ const Home = () => {
     axios
       .post(`${config.URL}/add`, data)
       .then((res) => {
-        console.log(res.data);
+        setIsDeleted(!isDeleted);
+
       })
       .catch((err) => {
         console.log(err);
