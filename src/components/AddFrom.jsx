@@ -28,7 +28,7 @@ const AddFrom = (props) => {
         name="age"
         control={control}
       
-        render={({ field }) => <Form.Control {...register("age")} type="number" placeholder="Enter Age" />}
+        render={({ field }) => <Form.Control {...register("age")} type="number"  value={props?.data?.age} placeholder="Enter Age" />}
       />
        <p style={{color:"red"}}>{errors.age?.message}</p>
        
@@ -43,7 +43,7 @@ const AddFrom = (props) => {
         name="name"
         control={control}
       
-        render={({ field }) => <Form.Control {...register("name")} type="text" placeholder="Enter Name" />}
+        render={({ field }) => <Form.Control {...register("name")}  value={props?.data?.name} type="text" placeholder="Enter Name" />}
       />
              <p style={{color:"red"}}>{errors.name?.message}</p>
 
@@ -53,10 +53,10 @@ const AddFrom = (props) => {
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Address</Form.Label>
         <Controller
-        name="name"
+        name="address"
         control={control}
       
-        render={({ field }) => <Form.Control {...register("address")} type="text" placeholder="Enter Address" />}
+        render={({ field }) => <Form.Control {...register("address")} value={props?.data?.address} type="text" placeholder="Enter Address" />}
       />     
              <p style={{color:"red"}}>{errors.address?.message}</p>
 
