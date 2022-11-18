@@ -13,14 +13,18 @@ const schema = yup.object({
 
 const AddFrom = (props) => {
 
-    const { register, handleSubmit, control,formState:{ errors } } = useForm({
+    const { register, handleSubmit,reset,control,formState:{ errors } } = useForm({
         resolver: yupResolver(schema)
       });
-     // const onSubmit = data => console.log(data);
+    const onSubmit = data =>{
+      props.AddItem(data)
+      reset()
+      
+    };
     
   return (
     <div>
-        <Form  onSubmit={handleSubmit(props.AddItem)}>
+        <Form  onSubmit={handleSubmit(onSubmit)  }>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Age</Form.Label>
 
@@ -70,6 +74,10 @@ const AddFrom = (props) => {
     </Form>
     </div>
   )
+
+  // Do conditional rendering for submit and edit Button based on props.data value
+
+  // Call the edit api and edit the data /edit/:id
 }
 
 export default AddFrom
