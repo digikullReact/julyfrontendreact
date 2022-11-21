@@ -1,0 +1,196 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users":[
+    {
+      "id": "637b7ab60e7dda50b3884fcc",
+      "age": 93,
+      "name": "Davidson Wolf",
+      "address": "698 Grattan Street, Blue, Virginia, 579"
+    },
+    {
+      "id": "637b7ab61990c0dcb0b44f6a",
+      "age": 33,
+      "name": "Cardenas Anthony",
+      "address": "801 Ferris Street, Saranap, Virgin Islands, 8461"
+    },
+    {
+      "id": "637b7ab65799bf7e3983e071",
+      "age": 71,
+      "name": "Kerr Vazquez",
+      "address": "942 Cadman Plaza, Edgar, South Carolina, 7129"
+    },
+    {
+      "id": "637b7ab6ed3168060e9d6ebe",
+      "age": 77,
+      "name": "Florine Alvarez",
+      "address": "265 Seeley Street, Longbranch, Illinois, 5835"
+    },
+    {
+      "id": "637b7ab6f0b837477b094f6b",
+      "age": 77,
+      "name": "Sondra Mcfarland",
+      "address": "989 Garden Place, Hatteras, Marshall Islands, 3738"
+    },
+    {
+      "id": "637b7ab68c1c92da886cc8fe",
+      "age": 23,
+      "name": "Laura Goodman",
+      "address": "890 Ridge Court, Wakulla, New Jersey, 7443"
+    },
+    {
+      "id": "637b7ab6847fac50aa0d415c",
+      "age": 10,
+      "name": "Juliana Bennett",
+      "address": "348 Fairview Place, Davenport, Kansas, 2497"
+    },
+    {
+      "id": "637b7ab6805935c0307f2d56",
+      "age": 51,
+      "name": "Janna Oneal",
+      "address": "643 Lewis Place, Cumminsville, Wisconsin, 5889"
+    },
+    {
+      "id": "637b7ab658e17050f80e8b0a",
+      "age": 96,
+      "name": "Dorothea Paul",
+      "address": "745 Herkimer Street, Loretto, Oregon, 966"
+    },
+    {
+      "id": "637b7ab63d60910d7381886e",
+      "age": 40,
+      "name": "Aurora Dominguez",
+      "address": "411 Hanson Place, Russellville, Pennsylvania, 9732"
+    },
+    {
+      "id": "637b7ab6b9ff5d4438325fe4",
+      "age": 89,
+      "name": "Louise Pugh",
+      "address": "333 Gardner Avenue, Richford, Arizona, 463"
+    },
+    {
+      "id": "637b7ab66e579c9110efe795",
+      "age": 57,
+      "name": "Savage Mooney",
+      "address": "430 Beaumont Street, Eastvale, Colorado, 6399"
+    },
+    {
+      "id": "637b7ab6dccd06ce87c39bfc",
+      "age": 27,
+      "name": "Phelps Meyers",
+      "address": "437 Auburn Place, Englevale, Rhode Island, 317"
+    },
+    {
+      "id": "637b7ab633bd9af5dd62282f",
+      "age": 39,
+      "name": "Buck Hayes",
+      "address": "754 Bushwick Place, Summerfield, Maine, 7376"
+    },
+    {
+      "id": "637b7ab669f81669c79eaaca",
+      "age": 16,
+      "name": "Alexandra Payne",
+      "address": "770 Dodworth Street, Elwood, Hawaii, 5656"
+    },
+    {
+      "id": "637b7ab67c08a5c1e8638a23",
+      "age": 53,
+      "name": "Mcgowan Cummings",
+      "address": "724 Caton Avenue, Springdale, District Of Columbia, 2158"
+    },
+    {
+      "id": "637b7ab6dce634de08abd3fc",
+      "age": 64,
+      "name": "Mendoza Powell",
+      "address": "598 Maujer Street, Darlington, Wyoming, 2527"
+    },
+    {
+      "id": "637b7ab6ebc2dcea92122e2f",
+      "age": 11,
+      "name": "Hawkins Brewer",
+      "address": "296 Underhill Avenue, Herlong, Delaware, 4475"
+    },
+    {
+      "id": "637b7ab67620a6eb32c79d79",
+      "age": 48,
+      "name": "Mueller Henson",
+      "address": "134 Seba Avenue, Dupuyer, Guam, 4224"
+    },
+    {
+      "id": "637b7ab617f2250d69443f06",
+      "age": 81,
+      "name": "Rachel Vaughan",
+      "address": "583 Wogan Terrace, Maury, Arkansas, 1611"
+    },
+    {
+      "id": "637b7ab6f1100373284ee4fe",
+      "age": 76,
+      "name": "Marks Hancock",
+      "address": "680 Doughty Street, Baker, Georgia, 6558"
+    },
+    {
+      "id": "637b7ab6b78f114fd6784a3d",
+      "age": 24,
+      "name": "Holmes Gay",
+      "address": "798 Porter Avenue, Longoria, North Dakota, 2530"
+    },
+    {
+      "id": "637b7ab6cb3b4492b08c92e4",
+      "age": 74,
+      "name": "Sweet Holman",
+      "address": "991 Beayer Place, Greenock, Ohio, 6096"
+    },
+    {
+      "id": "637b7ab6aa398aff36a2b61b",
+      "age": 59,
+      "name": "Hunt Valdez",
+      "address": "899 Lois Avenue, Waverly, Puerto Rico, 9895"
+    },
+    {
+      "id": "637b7ab64602b22622402517",
+      "age": 31,
+      "name": "Della Branch",
+      "address": "215 Village Court, Washington, American Samoa, 1084"
+    },
+    {
+      "id": "637b7ab6dfe1accd300c8fd1",
+      "age": 58,
+      "name": "Berg Albert",
+      "address": "894 Grant Avenue, Lafferty, Iowa, 455"
+    },
+    {
+      "id": "637b7ab66360658c32ab047b",
+      "age": 37,
+      "name": "Reilly Leblanc",
+      "address": "164 Lake Place, Northchase, Oklahoma, 7894"
+    },
+    {
+      "id": "637b7ab65b136a92d09cbcb6",
+      "age": 92,
+      "name": "Young Luna",
+      "address": "527 Dekalb Avenue, Trexlertown, Alabama, 2247"
+    },
+    {
+      "id": "637b7ab63584afb025598121",
+      "age": 66,
+      "name": "Milagros Love",
+      "address": "928 Radde Place, Vowinckel, Tennessee, 6052"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+
+}

@@ -7,3 +7,5 @@ function PrivateRoute({ children }) {
 }
 
 export default PrivateRoute;
+
+// Signup page in this
