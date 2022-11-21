@@ -2,6 +2,7 @@ import App from "./App"
 import Home from "./pages/Home"
 
 import EditPage from "./pages/EditPage";
+import Search from "./pages/Search";
 const routes=[
     {
       path: "/",
@@ -10,6 +11,10 @@ const routes=[
         {
           path: "home",
           element: <Home />,
+        },
+        {
+          path: "search",
+          element: <Search />,
         }
        ,
        {
