@@ -31,9 +31,16 @@ const EditPage = () => {
 
   },[])
 
+  const CallEditApi=(editdata)=>{
+    // make an api call here
+
+    console.log("Edit called");
+
+  }
+
   return (
     <div>
-      <AddFrom data={state}/>
+      <AddFrom data={state} CallEditApi={CallEditApi}/>
 
 
     </div>

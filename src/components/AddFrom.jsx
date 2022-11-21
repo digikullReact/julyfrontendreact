@@ -17,10 +17,19 @@ const AddFrom = (props) => {
         resolver: yupResolver(schema)
       });
     const onSubmit = data =>{
-      props.AddItem(data)
+      if(props.data){
+        // we are in edit mode
+       props.CallEditApi(data);
+      }else{
+        // We are in the add mode 
+        props.AddItem(data)
+      }
+   
       reset()
       
     };
+
+ 
     
   return (
     <div>
@@ -65,10 +74,16 @@ const AddFrom = (props) => {
              <p style={{color:"red"}}>{errors.address?.message}</p>
 
        </Form.Group>
-  
-      <Button variant="primary" type="submit">
+
+       {
+        props.data? <Button variant="primary" type="submit" >
+        Edit
+      </Button>: <Button variant="primary" type="submit">
         Submit
       </Button>
+       }
+  
+     
 
    
     </Form>
