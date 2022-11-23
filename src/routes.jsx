@@ -6,6 +6,8 @@ import EditPage from "./pages/EditPage";
 import Search from "./pages/Search";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import Controlled from "./pages/Controlled";
+import Uncontrolled from "./pages/Uncontrolled";
 const routes=[
     {
       path: "/",
@@ -40,6 +42,14 @@ const routes=[
        {
         path: "/edit/:id",
         element: <EditPage />,
+      },
+      {
+        path: "control",
+        element: <Controlled />,
+      },
+      {
+        path: "uncontrol",
+        element: <Uncontrolled />,
       }
      
   ]
