@@ -59,6 +59,7 @@ const AddFrom = (props) => {
 
     const onSubmit = data =>{
       if(props.id){
+        data._id=props.id;
         // we are in edit mode
        props.CallEditApi(data);
       }else{
