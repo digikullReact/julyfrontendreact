@@ -125,11 +125,7 @@ const AddFrom = (props) => {
        </Form.Group>
 
        {
-        props.id? <Button variant="primary" type="submit" >
-        Edit
-      </Button>: <Button variant="primary" type="submit">
-        Submit
-      </Button>
+        props.id? <Button variant="primary" type="submit" > Edit</Button>: <Button variant="primary" type="submit">Submit</Button>
        }
   
      
