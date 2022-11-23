@@ -10,10 +10,11 @@ const EditPage = () => {
   let { id } = useParams();
 
 
+
 const CallEditApi=(editdata)=>{
     // make an api call here
 axios.put(`${config.URL}/edit/${id}`,editdata).then(response=>{
-    console.log(response);
+   
   }).catch(err=>{
     console.log(err);
   })

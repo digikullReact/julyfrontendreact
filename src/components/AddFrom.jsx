@@ -6,16 +6,19 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import axios from 'axios';
 import config from '../config';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const AddFrom = (props) => {
+  const navigate=useNavigate();
   const [state,setState]=useState({
     name:"",
     age:0,
     address:""
  
   })
+  const [isEdit,setIsEdit]=useState(false);
 
   const schema = yup.object({
     name: yup.string().required().default(state.name),
@@ -62,12 +65,16 @@ const AddFrom = (props) => {
         data._id=props.id;
         // we are in edit mode
        props.CallEditApi(data);
+       navigate("/home")
+
+      // setIsEdit(!isEdit);  // it shoule be inside callback
+
       }else{
         // We are in the add mode 
         props.AddItem(data)
       }
    
-      reset()
+      //reset()
       
     };
 
@@ -118,7 +125,7 @@ const AddFrom = (props) => {
        </Form.Group>
 
        {
-        props.data? <Button variant="primary" type="submit" >
+        props.id? <Button variant="primary" type="submit" >
         Edit
       </Button>: <Button variant="primary" type="submit">
         Submit
