@@ -1,23 +1,64 @@
-import React from 'react'
+import React ,{useEffect, useState} from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useForm,Controller } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import axios from 'axios';
+import config from '../config';
 
-const schema = yup.object({
-    name: yup.string().required(),
-    age: yup.number().positive().integer().required(),
-    address:yup.string().required()
-  }).required();
+
 
 const AddFrom = (props) => {
+  const [state,setState]=useState({
+    name:"",
+    age:0,
+    address:""
+ 
+  })
 
-    const { register, handleSubmit,reset,control,formState:{ errors } } = useForm({
-        resolver: yupResolver(schema)
-      });
+  const schema = yup.object({
+    name: yup.string().required().default(state.name),
+    age: yup.number().positive().integer().required().default(state.age),
+    address:yup.string().required().default(state.address)
+  }).required();
+
+  const { register, handleSubmit,reset,control,formState:{ errors },setValue } = useForm({
+    resolver: yupResolver(schema)
+  });
+ 
+
+
+  const singleDataFromApi=()=>{
+    axios.get(`${config.URL}/single/${props.id}`).then(response=>{
+  
+      setValue("name",response.data.name)
+      setValue("age",response.data.age)
+
+      setValue("address",response.data.address)
+
+      
+    }).catch(err=>{
+      console.log(err);
+    })
+
+  }
+
+ 
+
+  useEffect(()=>{
+   
+    singleDataFromApi();
+  
+
+  },[])
+
+
+
+
+
     const onSubmit = data =>{
-      if(props.data){
+      if(props.id){
         // we are in edit mode
        props.CallEditApi(data);
       }else{
@@ -41,7 +82,7 @@ const AddFrom = (props) => {
         name="age"
         control={control}
       
-        render={({ field }) => <Form.Control {...register("age")} type="number"  value={props?.data?.age} placeholder="Enter Age" />}
+        render={({ field }) => <Form.Control {...register("age")} type="number"   placeholder="Enter Age" />}
       />
        <p style={{color:"red"}}>{errors.age?.message}</p>
        
@@ -56,7 +97,7 @@ const AddFrom = (props) => {
         name="name"
         control={control}
       
-        render={({ field }) => <Form.Control {...register("name")}  value={props?.data?.name} type="text" placeholder="Enter Name" />}
+        render={({ field }) => <Form.Control {...register("name")} name="name"  type="text" placeholder="Enter Name" />}
       />
              <p style={{color:"red"}}>{errors.name?.message}</p>
 
@@ -69,7 +110,7 @@ const AddFrom = (props) => {
         name="address"
         control={control}
       
-        render={({ field }) => <Form.Control {...register("address")} value={props?.data?.address} type="text" placeholder="Enter Address" />}
+        render={({ field }) => <Form.Control {...register("address")} name="address"  type="text"  placeholder="Enter Address" />}
       />     
              <p style={{color:"red"}}>{errors.address?.message}</p>
 
