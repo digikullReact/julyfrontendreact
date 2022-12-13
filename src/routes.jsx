@@ -10,6 +10,7 @@ import Controlled from "./pages/Controlled";
 import Uncontrolled from "./pages/Uncontrolled";
 import Something from "./pages/Something";
 import Reducerhook from "./pages/Reducerhook";
+import RefHook from "./pages/RefHook";
 const routes=[
     {
       path: "/",
@@ -63,6 +64,10 @@ const routes=[
 {
   path: "/reducerhook",
   element: <Reducerhook />,
+},
+{
+  path: "/refhook",
+  element: <RefHook />,
 }
 
 
