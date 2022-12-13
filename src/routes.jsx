@@ -8,6 +8,8 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Controlled from "./pages/Controlled";
 import Uncontrolled from "./pages/Uncontrolled";
+import Something from "./pages/Something";
+import Reducerhook from "./pages/Reducerhook";
 const routes=[
     {
       path: "/",
@@ -53,7 +55,18 @@ const routes=[
       }
      
   ]
-}]
+},
+{
+  path: "/something",
+  element: <Something />,
+},
+{
+  path: "/reducerhook",
+  element: <Reducerhook />,
+}
+
+
+]
 
 export default routes;
 

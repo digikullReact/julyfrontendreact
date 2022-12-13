@@ -12,13 +12,14 @@ const Uncontrolled = () => {
         age: yup.number().required("age is evevevrvrvrv").positive("iiii").integer(),
       }).required();
 
-      const { register, handleSubmit, formState:{ errors },setValue } = useForm({
+      const { register, handleSubmit, formState:{ errors },setValue ,reset} = useForm({
         resolver: yupResolver(schema)
       });
       const onSubmit = data => {
 
         // call the api or do any kind of stuff with the form data
         console.log(data);
+        reset();
       }
 
 
