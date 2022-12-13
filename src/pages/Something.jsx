@@ -1,8 +1,18 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import DataContext from '../context'
+
 
 const Something = () => {
+  const state=useContext(DataContext);
   return (
-    <div>Something</div>
+    <div>{
+       state.name
+      
+      }
+      {
+        state.age
+      }
+      </div>
   )
 }
 
