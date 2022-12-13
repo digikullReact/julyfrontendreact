@@ -19,6 +19,7 @@ const RefHook = () => {
       //console.log(  inputRef.current)
       inputRef.current.value="8888"
       spanRef.current.innerText="Hello world";
+      // document.getElementById("id");  // totaly avoid in react instead use refs
       spanRef.current.style.color="green";
 
      }
@@ -37,7 +38,7 @@ const RefHook = () => {
   return (
     <div>
 
-        <input type={"text"} ref={inputRef} />
+        <input type={"text"} ref={inputRef}  />
 
   <button onClick={changeState}>
     Click to Change State
