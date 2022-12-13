@@ -3,7 +3,14 @@ import React,{useReducer} from 'react'
 const Reducerhook = () => {
 const myReducer=(state,action)=>{
 
+    if (action.type=="input"){
+        state=action.payload;
+        return state;
+
+    }
+
     // We are actually making the state change in here in our reducer rather than ,in our handleClick
+    /*
     switch(action.type){
         case "input":
             state=action.payload;
@@ -18,6 +25,8 @@ const myReducer=(state,action)=>{
             return state;   
 
     }
+    */
+   return state;
 }
     const [state,dispatch]=useReducer(myReducer,"Hello World");
     const handleClick=()=>{
