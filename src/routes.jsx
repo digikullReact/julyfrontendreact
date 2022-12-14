@@ -11,6 +11,8 @@ import Uncontrolled from "./pages/Uncontrolled";
 import Something from "./pages/Something";
 import Reducerhook from "./pages/Reducerhook";
 import RefHook from "./pages/RefHook";
+import Callbackhook from "./pages/Callbackhook";
+import Memohook from "./pages/Memohook";
 const routes=[
     {
       path: "/",
@@ -68,7 +70,15 @@ const routes=[
 {
   path: "/refhook",
   element: <RefHook />,
-}
+},
+{
+path:"/memo",
+element:<Memohook/>
+},
+{
+  path:"/callback",
+  element:<Callbackhook/>
+  }
 
 
 ]

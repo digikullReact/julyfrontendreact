@@ -7,16 +7,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {RouterProvider,createBrowserRouter} from "react-router-dom"
 import DataContext from './context';
+import Globalstate from './globalState';
 const router=createBrowserRouter(routes)
-const Globalstate={
-     name:"John",
-     age:25
-
-}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
      <DataContext.Provider value={Globalstate}>
- <RouterProvider router={router} />
+{/**<App/> */} 
+<RouterProvider router={router} /> 
+
      </DataContext.Provider>
     
 
